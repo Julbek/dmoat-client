@@ -1,0 +1,128 @@
+.about-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--background-color-01);
+    color: white;
+    text-align: left;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    color: var(--text_colour_01);
+}
+
+
+.about-top-section {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    
+   
+}
+
+
+
+li {
+    margin-bottom: 20px;
+}
+.x-button {
+    margin-right: 5%;
+    background-color: var(--background-color-03);
+    box-shadow: none;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--component-color-02);
+}
+
+.x-button:hover{
+    cursor: pointer;
+}
+
+.x-icon{
+    width: 70%;
+}
+
+.text-wrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 90%;
+}
+
+.about-header {
+    font-size: 3rem;
+}
+
+.about-logo {
+    width: 100%;
+}
+
+.about-paragraph {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+
+.about-bottom-space{
+    height: 2%;
+}
+
+
+
+.about-wrap::-webkit-scrollbar {
+    z-index: 1;
+    width: 1
+    em; /* Set the width of the scrollbar */
+  }
+  
+  .about-wrap::-webkit-scrollbar-thumb {
+    background-color: #ffffff; /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Set the border radius of the thumb */
+  }
+  
+  .about-wrap::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Set the color of the scrollbar thumb on hover */
+  }
+  
+  .about-wrap::-webkit-scrollbar-track {
+    display: none;
+    background-color: #f1f1f1; /* Set the color of the scrollbar track */
+  }
+
+
+@media screen and (min-width:1280px)  {
+
+    .about-wrap {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+
+  
+  }
+  
+  @media screen and (min-width:1920px)  {
+
+
+    .about-wrap {
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-bottom: 0%;
+    }
+
+   
+  }
+  
+  
+  
+  
+  

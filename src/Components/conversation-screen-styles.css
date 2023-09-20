@@ -1,0 +1,175 @@
+.conversation-screen-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 94%;
+  padding-top: 100px;
+  padding-bottom: 115px;
+  height: 100%;
+  overflow-y: auto;
+
+}
+
+
+.conversation-screen-wrap::-webkit-scrollbar {
+  display: none;
+  z-index: 1;
+  width: 2rem;
+}
+
+.conversation-screen-wrap::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.conversation-screen-wrap::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.conversation-screen-wrap::-webkit-scrollbar-track {
+  display: none;
+  background-color: #f1f1f1;
+}
+
+.message-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+
+  display: flex;
+  justify-items: left;
+  margin-bottom: 6%;
+  justify-content: right;
+
+
+}
+
+#ai-response-wrap {
+  border-radius: 2vh;
+  justify-content: left;
+}
+
+.message-avatar-wrap {
+  display: flex;
+  width: 40px;
+}
+
+#user-avatar {
+  opacity: 0;
+}
+
+.message-img {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--color1);
+  border-radius: 100%;
+}
+
+.message-text-wrap {
+  box-sizing: border-box;
+  padding: 10px;
+  padding-bottom: 0;
+  border-radius: 15px 15px 2px 15px;
+  margin-left: 3%;
+  overflow: auto;
+  background-color: var(--component-color-02);
+  max-width: 75%;
+}
+
+#ai-text-wrap {
+  background-color: var(--component-color-01);
+  ;
+  border-radius: 2px 20px 20px 20px;
+
+}
+
+.message-text {
+  text-align: left;
+  margin-top: 0;
+  color: var(--text-color-01);
+  font-size: 1.75rem;
+  font-weight: 200;
+}
+
+
+.persona-intro-text {
+  text-align: left;
+  margin-top: 0;
+  color: var(--text-color-01);
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.persona-intro-wrap {
+  height: fit-content;
+  box-sizing: content-box;
+  padding: 4%;
+  border: 1px solid rgb(116, 116, 116, 0);
+  border-radius: 2vh;
+
+  margin-bottom: 10%;
+
+  border: 1px solid var(--border-color-01);
+
+}
+
+
+@keyframes pulsateStar {
+
+  0%,
+  100% {
+    transform: scale(0.9);
+    filter: brightness(0.8);
+  }
+
+  25% {
+    transform: scale(1);
+    filter: brightness(1.2);
+
+  }
+
+  50% {
+    transform: scale(0.9);
+    filter: brightness(0.8);
+
+  }
+
+  75% {
+    transform: scale(1);
+    filter: brightness(1.2);
+  }
+}
+
+.pulsating .message-avatar-wrap .message-img {
+  animation: pulsateStar 2s infinite;
+
+}
+
+@media screen and (min-width:768px) {
+
+  .conversation-screen-wrap {
+    padding-top: 250px;
+
+  }
+}
+
+
+@media screen and (min-width:1280px) {
+
+  .conversation-screen-wrap {
+    width: 60%;
+
+  }
+
+
+}
+
+@media screen and (min-width:1920px) {
+
+  .conversation-screen-wrap {
+    width: 40%;
+    padding-bottom: 75px;
+
+  }
+
+
+}

@@ -1,0 +1,119 @@
+.gpt-persona-box-wrap {
+    width: 100%;
+    margin: 2%;
+
+}
+
+.gpt-persona-box-wrap:hover {
+    cursor: pointer;
+
+}
+
+.gpt-persona-box-img-wrap {
+
+    border: 2px dotted rgba(255, 255, 255, 0);
+
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 10px;
+    transition: 0.2s;
+
+}
+
+
+.gpt-persona-box-img-wrap:hover {
+
+    border: 2px dotted var(--border-color-01);
+    transition: 0.2s;
+
+}
+
+.gpt-persona-box-img-wrap.selected {
+
+    border: 2px solid var(--border-color-01);
+
+
+    transition: 0.2s;
+
+}
+
+
+
+.gpt-persona-box-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+
+    border-radius: 2.5vh;
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.2s;
+    opacity: 1;
+    filter: grayscale(1);
+    opacity: 1;
+    mix-blend-mode: multiply;
+
+
+
+}
+
+.gpt-persona-box-img:hover {
+    filter: grayscale(0.1);
+
+
+}
+
+
+
+.gpt-persona-box-img.selected {
+    opacity: 1;
+    transition: 0.2s;
+    filter: grayscale(0.1);
+    color: white;
+
+
+}
+
+.gpt-persona-box-name {
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-top: 4px;
+    color: var(--text-color-01)
+}
+
+
+@media screen and (min-width:768px) {
+
+    .gpt-persona-box-wrap {
+        width: 225px;
+        margin: 5px;
+
+    }
+
+
+}
+
+
+
+
+@media screen and (min-width:1280px) {
+
+    .gpt-persona-box-wrap {
+        width: 150px;
+
+
+    }
+
+}
+
+@media screen and (min-width:1920px) {
+
+    .gpt-persona-box-wrap {
+        width: 100%;
+
+    }
+
+
+
+}

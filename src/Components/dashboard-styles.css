@@ -1,0 +1,157 @@
+.img {
+    width: 100%;
+    height: auto;
+}
+
+
+.dashboard-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    margin-top: 75px;
+    padding-bottom: 75px;
+    height: 100%;
+}
+
+.gpt-persona-boxes-wrap {
+
+
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+
+}
+
+
+.introduction {
+    width: 90%;
+
+}
+
+.introduction-logo {
+    width: 35%;
+}
+
+
+.introduction-text {
+    color: var(--text-color-01);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+
+
+    .introduction-logo {
+        width: 25%;
+    }
+
+    .dashboard-wrap {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: transparent;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+        margin-top: 175px;
+        padding-bottom: 0px;
+        height: 100%;
+    }
+
+    .gpt-persona-boxes-wrap {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+    }
+
+
+
+
+
+
+
+}
+
+@media screen and (min-width:1280px) {
+
+    .dashboard-wrap {
+        width: 70%;
+
+        justify-content: center;
+        align-items: center;
+        margin-top: 125px;
+    }
+
+    .introduction {
+        width: 100%;
+
+    }
+
+    .introduction-logo {
+        width: 20%;
+    }
+
+    .gpt-persona-boxes-wrap {
+        justify-items: center;
+        width: 100%;
+        display: flex;
+
+
+    }
+
+
+
+
+}
+
+
+@media screen and (min-width:1920px) {
+
+    .dashboard-wrap {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        width: 40%;
+        padding-bottom: 3%;
+        margin-top: 150px;
+
+    }
+
+    .introduction {
+        width: 95%;
+
+    }
+
+    .introduction-logo {
+        width: 20%;
+    }
+
+    .gpt-persona-boxes-wrap {
+        justify-items: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        padding-top: 5%;
+        padding-bottom: 0%;
+        overflow: hidden;
+
+    }
+
+
+
+}

@@ -1,0 +1,274 @@
+.bottom-bar {
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 125px;
+    flex-direction: column;
+    flex-grow: initial;
+    width: 100%;
+    background-color: var(--background-color-03);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color-01);
+    z-index: 50;
+}
+
+
+.input-field {
+    display: flex;
+    align-content: center;
+    align-items: end;
+    justify-content: center;
+    background-color: var(--component-color-01);
+    border: 1px solid rgb(255, 255, 255, 0);
+    width: 91%;
+    border-radius: 25px;
+    height: auto;
+    max-height: 50vh;
+    position: absolute;
+    bottom: 58px;
+    padding: 4px;
+    overflow: auto;
+    flex-grow: 1;
+    transition: 0.1s;
+    border: 1px solid rgb(255, 255, 255, 0);
+
+}
+
+
+.input-field:hover {
+    filter: brightness(1.05);
+}
+
+
+
+.input-field.active {
+    filter: brightness(1.05);
+    border: 1px solid rgb(255, 255, 255, 0.25);
+    transition: 0.1s;
+}
+
+
+.chat-form {
+    display: flex;
+    min-height: fit-content;
+    min-width: fit-content;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    align-items: end;
+
+}
+
+textarea {
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 14px;
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color-01);
+    caret-color: var(--text-color-01);
+    font-size: 2rem;
+    font-weight: 400;
+    height: 10px;
+    width: 90%;
+    background-color: transparent;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+
+
+.send-button {
+    box-sizing: border-box;
+    margin-bottom: 1px;
+    border-radius: 25px;
+    height: 42px;
+    aspect-ratio: 1/1;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: 0.2s;
+    pointer-events: none;
+    opacity: 0.5;
+
+}
+
+.send-button.active {
+    box-sizing: border-box;
+    margin-bottom: 1px;
+    border-radius: 25px;
+    height: 42px;
+    aspect-ratio: 1/1;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    padding-bottom: 3px;
+    opacity: 1;
+    background-color: var(--component-color-selected);
+    cursor: pointer;
+    pointer-events: all;
+
+}
+
+.send-button.active:hover {
+    cursor: pointer;
+}
+
+
+.send-icon {
+    width: 65%;
+    aspect-ratio: 1/1;
+    transition: 0.2s;
+    padding-left: 5px;
+    padding-top: 1px;
+}
+
+.send-icon.active {
+    width: 65%;
+    aspect-ratio: 1/1;
+    transform: rotate(0DEG);
+    filter: invert();
+
+}
+
+
+.send-icon.active:hover {
+    padding-left: 2px;
+    transform: rotate(-90DEG);
+}
+
+
+
+.more-info:hover {
+    cursor: pointer;
+}
+
+
+
+
+.footer-wrap {
+    width: 92%;
+    position: absolute;
+    bottom: 10px;
+    font-size: 1.12rem;
+    color: var(--text-color-03);
+}
+
+@media screen and (min-width:368px) {
+    .footer-wrap {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+
+    .footer-wrap {
+        bottom: 15px
+    }
+
+
+}
+
+
+@media screen and (min-width:768px) {
+
+    .bottom-bar {
+        width: 60%;
+        left: 40%;
+        transition: 0.1s;
+    }
+
+    .bottom-bar.fullscreen {
+        width: 100%;
+        left: 0;
+        transition: 0.1s;
+    }
+
+
+}
+
+@media screen and (min-width:884px) {
+
+    .bottom-bar {
+        width: 50%;
+        left: 50%;
+        transition: 0.1s;
+    }
+
+    .bottom-bar.fullscreen {
+        width: 100%;
+        left: 0;
+        transition: 0.1s;
+    }
+
+
+}
+
+
+@media screen and (min-width:1280px) {
+
+    .bottom-bar {
+        width: 75%;
+        left: 25%;
+        transition: 0.1s;
+    }
+
+    .bottom-bar.fullscreen {
+        width: 100%;
+        left: 0;
+        transition: 0.1s;
+    }
+
+    .input-field {
+        width: 70%;
+    }
+
+}
+
+
+@media screen and (min-width:1920px) {
+
+
+    .bottom-bar {
+
+        width: 85%;
+        left: 15%;
+
+
+    }
+
+
+    .bottom-bar.fullscreen {
+        width: 100%;
+        left: 0;
+        transition: 0.1s;
+    }
+
+    .input-field {
+        width: 40%;
+    }
+
+    .footer-wrap {
+        font-size: 1.25rem;
+    }
+
+
+
+
+
+
+}
