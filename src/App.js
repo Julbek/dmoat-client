@@ -69,7 +69,7 @@ function App() {
 
   //DEFAULT MOUNT DATA CALL
   useEffect(() => {
-    fetch("https://dmoat-demo-server.vercel.app/api/gptpersonas")
+    fetch("https://dmoat-server.vercel.app/api/gptpersonas")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -175,7 +175,7 @@ function App() {
   async function ApiHandler(payload) {
     setAiResponse(null);
     try {
-      const response = await fetch("https://dmoat-demo-server.vercel.app/chat", {
+      const response = await fetch("https://dmoat-server.vercel.app/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
