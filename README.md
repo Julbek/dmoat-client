@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Dmoat Chat App Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+DMoat is a ReactJS web platform where users can engage in conversations with AI personas inspired by some of the most renowned historical figures. By selecting from a diverse array of meticulously prompt engineered personas, users can immerse themselves in discussions that offer both historical insight and speculative projections. 
+The pivotal strength of the app lies in the Openai’s GPT-4 API. It harnesses the API's capabilities to fetch dynamic AI responses based on user queries, ensuring a fluid conversational experience.The design ethos of the app ensures adaptability across devices, offering seamless operation on desktops, tablets, and smartphones.
+This is a full-stack introductory demo, and although GPT-4 is still far too limited, it was a fun and interesting experiment for exploring the concept of anthropomorphic AI and how humans interact with it.  It  served also as an important professional growth journey and it showcases my product design and development skills as well as my conceptual thinking about cutting edge technologies.
 
-In the project directory, you can run:
+## Dependencies:
 
-### `npm start`
+The app implements the following third party libraries at the front-end: React and React-dom for the development architecture. It also uses additional and complementary packages like react-responsive for monitoring device size, autosize for managing text-areas size, dotenv is used for environmental variables and finally git for version control. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Backend support is built using Express, and it utilises axios for making API requests, as well as CORS and body-parser for handling request and response middleware.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## The Code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Architecture: The platform revolves around the app component where most variables and methods are defined (and managed). Due to its limited size there is no code splitting and this allows a more straightforward readability of the main code. 
 
-### `npm run build`
+File Organization: All the app components are modularized and stored neatly in the Components folder. A separate folder at the root contains the back-end components.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Comments: The code incorporates comments to elucidate its functionality and implementation.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Naming Conventions: Adherence to camelCase for variable and function naming while functional components and methods are named using PascalCase.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Programming Practices: The app predominantly utilises functional components accompanied by React hooks. Furthemore, due to its limited size, it implements only props for transferring data and variables between components( instead of using react context or third party libraries like Redux).
 
-### `npm run eject`
+## The Infrastructure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Backend Routes & Functionalities: GPT Personas Route (/api/gptPersonas): An asynchronous route that fetches the GPT personas from a local JSON file named gptpersonas.json. The server simulates an asynchronous action using setTimeout before sending the personas' data to the client.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Chat Route (/chat): This route accepts POST requests and forwards them to the GPT-4 API. The server expects a payload in the request. The actual interaction with the OpenAI API happens using axios. The GPT model version in use is gpt-4.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Environment Variables: DMOAT_API_KEY: This environment variable stores the API key required to authenticate with the GPT-4 API.
+Middleware:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+CORS: Configured to accept requests from http://localhost:3000 and http://192.168.8.105:3000.
+bodyParser.json(): Used for parsing incoming request bodies in a middleware.
+express.json(): Built-in middleware in Express to parse incoming requests with JSON payloads.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Useful Links & External Services
 
-### Code Splitting
+API Documentation: https://platform.openai.com/docs/api-reference
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Notes
+The app currently supports dynamic features like theme selection, managing chat interactions, seamless session management, and GPT Persona selection.
+For a nuanced understanding or any ambiguities, it's advisable to directly consult the source code and any related comments. Remember, this documentation serves as a high-level guide to understanding the application's infrastructure and functionalities.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developer contact: hello@joscoyne.co.uk

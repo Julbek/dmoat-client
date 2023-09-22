@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 
 //Component for rendering (and selecting) each GPT persona image and name at the dashboard
 
-export default function GptPersonaBox ({image, name, id, currentGptPersona, GptPersonaSelector}) {
+export default function GptPersonaBox ({image, name, id, currentGptPersona, GptPersonaSelector, loadingPersonas}) {
     let [selected, setSelected] = useState(false)
 
     useEffect(()=>{
@@ -17,7 +17,7 @@ export default function GptPersonaBox ({image, name, id, currentGptPersona, GptP
 
             <div className={selected?"gpt-persona-box-img-wrap selected":"gpt-persona-box-img-wrap"}>
 
-            <img className={selected?"gpt-persona-box-img selected":"gpt-persona-box-img"} src={image}></img>
+            <img className={selected?"gpt-persona-box-img selected":"gpt-persona-box-img"} src={loadingPersonas?"./assets/no_persona.jpg":{image}}></img>
 
 
             </div>
