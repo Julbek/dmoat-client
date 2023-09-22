@@ -31,15 +31,15 @@ export default function Dashboard ({gptPersonas, currentGptPersona, GptPersonaSe
 
           </div>
         </div>
-        <div className="gpt-persona-boxes-wrap">
-          
+        {loadingPersonas?<dic className="loader"></dic>:<div className="gpt-persona-boxes-wrap">
+
           {loadingPersonas===false && gptPersonas.map((persona)=>{
 
             return (<GptPersonaBox key={persona.id} id={persona.id} name = {persona.name} image={persona.image} currentGptPersona = {currentGptPersona} GptPersonaSelector={GptPersonaSelector} loadingPersonas={loadingPersonas}   />
             )
 
           })}
-        </div>
+        </div>}
       </div>
     );
 }

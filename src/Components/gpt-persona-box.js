@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 
 //Component for rendering (and selecting) each GPT persona image and name at the dashboard
 
-export default function GptPersonaBox ({image, name, id, currentGptPersona, GptPersonaSelector, loadingPersonas}) {
+export default function GptPersonaBox ({image, name, id, currentGptPersona, GptPersonaSelector}) {
     let [selected, setSelected] = useState(false)
 
     useEffect(()=>{

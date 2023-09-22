@@ -3,6 +3,23 @@
     height: auto;
 }
 
+.loader {
+    border: 16px solid var(--text-color-01); 
+    border-top: 16px solid var(--component-color-02); 
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: 10%;
+    animation: spin 2s linear infinite;
+    align-self: center;
+    justify-self: center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 
 .dashboard-wrap {
     box-sizing: border-box;
