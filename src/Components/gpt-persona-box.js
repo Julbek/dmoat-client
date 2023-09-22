@@ -17,7 +17,7 @@ export default function GptPersonaBox ({image, name, id, currentGptPersona, GptP
 
             <div className={selected?"gpt-persona-box-img-wrap selected":"gpt-persona-box-img-wrap"}>
 
-            <img className={selected?"gpt-persona-box-img selected":"gpt-persona-box-img"} src={loadingPersonas?"./assets/no_persona.jpg":{image}}></img>
+            <img className={selected?"gpt-persona-box-img selected":"gpt-persona-box-img"} src={image}></img>
 
 
             </div>
