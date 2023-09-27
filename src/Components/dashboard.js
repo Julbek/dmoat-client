@@ -31,7 +31,7 @@ export default function Dashboard ({gptPersonas, currentGptPersona, GptPersonaSe
 
           </div>
         </div>
-        {loadingPersonas?<dic className="loader"></dic>:<div className="gpt-persona-boxes-wrap">
+        {loadingPersonas?<div className="loader"></div>:<div className="gpt-persona-boxes-wrap">
 
           {loadingPersonas===false && gptPersonas.map((persona)=>{
 

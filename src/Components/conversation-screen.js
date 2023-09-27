@@ -110,7 +110,7 @@ export default function ConversationScreen({
     return (
       <div className="message-wrap">
         <div className="message-avatar-wrap" id="user-avatar">
-          <img className="message-img" src="./assets/user_icon.jpg"></img>
+          <img className="message-img" src=""></img>
         </div>
         <div className="message-text-wrap">
           <h3 className="message-text">{text}</h3>

@@ -189,7 +189,7 @@ function App() {
         setResponseData((prevResponseData) => data);
       } else {
         console.error("Unexpected data format:", data);
-        setAiResponse("Unexpected response format.");
+        setAiResponse("Well, something went wrong. Try again and see what happens!");
       }
     } catch (error) {
       console.error("Frontend error:", error);
