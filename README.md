@@ -32,9 +32,11 @@ Backend Routes & Functionalities: GPT Personas Route (/api/gptPersonas): An asyn
 Chat Route (/chat): This route accepts POST requests and forwards them to the GPT-4 API. The server expects a payload in the request. The actual interaction with the OpenAI API happens using axios. The GPT model version in use is gpt-4.
 
 Environment Variables: DMOAT_API_KEY: This environment variable stores the API key required to authenticate with the GPT-4 API.
+
+
 Middleware:
 
-CORS: Configured to accept requests from http://localhost:3000 and http://192.168.8.105:3000.
+CORS: Configured to accept requests from the specific deployment URL.
 bodyParser.json(): Used for parsing incoming request bodies in a middleware.
 express.json(): Built-in middleware in Express to parse incoming requests with JSON payloads.
 
